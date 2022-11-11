@@ -1,0 +1,26 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+div.card {
+  // Styling
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  width: 100%;
+  max-width: 500px;
+
+  border: 0px;
+  border-radius: 3px;
+  background: $CardBackground;
+  box-shadow: 4px 4px 8px 4px rgba(100,50,00,0.3);
+  &.fullWidth {
+    max-width: 100%;
+  }
+}

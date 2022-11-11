@@ -1,0 +1,61 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+header {
+  // Styling
+  color: White;
+  background: GetColor(2);
+
+  // Layout
+  display: flex;
+  //justify-content: space-between;
+
+  // Children
+  div.banner {
+    flex: 1;
+    display: flex;
+    a {
+      h1 {
+        color: White;
+        margin-left: 10px;
+        font-size: 200%;
+      }
+      img {
+        filter: invert(1);
+        margin-left: 10px;
+      }
+    }
+    a:hover,
+    a:active {
+      color: GetColor(7);
+    }
+    div.login {
+      flex: 1;
+      margin-right: 0.5rem;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+  div.navIcon {
+    // Styling
+    background: $MenuColor; // Nav Icon Open
+    // Children
+    img {
+      margin: 12px 15px 0px 15px;
+    }
+    &.navClosed {
+      // Nav Icon Closed
+      background: GetColor(3);
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+}

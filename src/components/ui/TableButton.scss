@@ -1,0 +1,44 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+
+button {
+  // Styling
+  margin: 0.5rem 0;
+  padding: 2px 5px;
+  border-radius: 3px;
+  min-width: 50px;
+  font-size: 85%;
+  transition: all 0.3s ease;
+  color: White;
+  font-weight: 600;
+  box-shadow: 2px 2px 4px 2px rgba(100,50,100,0.2);
+  &.Hide { display: none; }
+  &.Green {
+    background: $DarkGreen;
+    border: 1px solid $DarkGreen;
+  }
+  &.Red {
+    background: $DarkRed;
+    border: 1px solid $DarkRed;
+  }
+  &.Blue {
+    background: $Blue;
+    border: 1px solid $Blue;
+  }
+  &.Yellow {
+    color: $Charcoal;
+    background: $Yellow;
+    border: 1px solid $Yellow;
+  }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 8px 4px rgba(100,50,100,0.4);
+  }
+  
+}

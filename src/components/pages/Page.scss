@@ -1,0 +1,123 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Page Styling //////////////////////////////////
+// -----------------------------------------------
+
+h1 {
+  color: GetColor(4);
+  margin-bottom: 1rem;
+  font-size: 150%;
+}
+
+h2 {
+  color: GetColor(2);
+  margin-bottom: 1rem;
+  font-size: 120%;
+}
+
+h3 {
+  color: GetColor(4);
+  margin-bottom: 0.5rem;
+  font-size: 90%;
+}
+
+section {
+  color: $Jet;
+}
+
+// -----------------------------------------------
+// Form Styling //////////////////////////////////
+// -----------------------------------------------
+
+p.inconspicuous {
+  margin: 2rem 0;
+  color: MistyRose;
+}
+
+form {
+  // Children
+  h3.formTitle {
+    color: GetColor(3);
+    margin-top: 1rem;
+  }
+  div.formInstructions {
+    // Styling
+    color: $Jet;
+    margin: 2rem 0;
+    // Children
+    p {
+      span.advice { color: $DarkGreen; font-weight: 500; }
+      span.action { 
+        font-size: 80%; 
+        font-weight: 600; 
+        color: White; 
+        padding: 3px; 
+        border-radius: 3px; 
+        background: $DarkGreen; 
+        &::before, &::after { content: "\00a0\00a0\00a0"; }
+      }
+    }
+  }
+  div.formEntry select,
+  div.formEntry input,
+  div.formAction button {
+    width: 100%;
+    padding: 3px;
+    margin: 1px 0; // Add "extra" margin so it can be removed when in focus. Otherwise surrounding elements move annoyingly up and down!
+    border-radius: 2px;
+    border: 1px solid GetColor(4);
+    background: White;
+  }
+  div.formEntry {
+    label {
+      color: GetColor(4);
+      font-weight: 600;
+    }
+    input,
+    select {
+      &:hover,
+      &:focus {
+        outline: 0;
+        margin: 0 0; // Remove "extra" margin to compensate for extra border width. Otherwise surrounding elements move annoyingly up and down!
+      }
+      &:hover { border: 2px solid GetColor(7); }
+      &:focus { border: 2px solid $Green; }
+    }
+  }
+  div.formError {
+    p.errorMessage {
+      color: $DarkRed;
+      margin-bottom: 1rem;
+    }
+  }
+  div.formAction {
+    button {
+      // Styling
+      margin-top: 1.3rem;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 85%;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 4px 4px 8px 4px rgba(100,50,100,0.4);
+      }
+      &.primaryAction {
+        color: White;
+        background: $DarkGreen;
+        border: 1px solid $DarkGreen;
+        font-weight: 600;
+      }
+      &.secondaryAction {
+        color: White;
+        background: $DarkRed;
+        border: 1px solid $DarkRed;
+        font-weight: 600;
+      }
+    }
+  }
+}

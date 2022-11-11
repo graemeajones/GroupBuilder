@@ -1,0 +1,48 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+
+p.Tempty { font-weight: bold; }
+table {
+  font-size: 90%;
+  width: 100%;
+  border-width: 0px;
+  border-spacing: 0px;
+  border: 2px solid GetColor(10);
+  margin-bottom: 5px;
+  thead,
+  tbody {
+    // Children
+    tr { 
+      // Styling
+      &.containsButtons { height: 50px; }
+      // Children
+      th,
+      td {
+        // Styling
+        padding: 3px;
+        text-align: center;
+        vertical-align: top;
+        &:first-child { text-align: left; }
+        &.Tleft { text-align: left; }
+        &.Tright { text-align: right; }
+        &.Tcentre { text-align: center; }
+      }
+      th {
+        padding: 5px 3px 10px 3px;
+        color: GetColor(5);
+        font-weight: 500;
+        background: GetColor(10);
+      }
+      td { color: $Jet; }
+    }
+    tr:nth-child(odd) {
+      background: GetColor(11);
+    }
+  }
+}

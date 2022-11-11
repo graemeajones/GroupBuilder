@@ -1,0 +1,40 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+div#root {
+  // Styling
+  background: $RootBackground;
+
+  // Dimensions
+  min-height: 100vh;
+
+  // Layout
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  
+  div.underlay {
+    // Styling
+    background: $UnderlayColor;
+
+    // Layout
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    // Main content 
+    & > main {
+      // Styling
+      padding: 30px;
+      background: $MainBackground;
+
+      // Dimensions
+      width: 100%;
+      max-width: 1000px;
+    }
+  }
+}

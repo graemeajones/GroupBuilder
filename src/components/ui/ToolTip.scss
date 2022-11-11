@@ -1,0 +1,28 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+
+div.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  & > span.tooltipText {
+    visibility: hidden;
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+    color: $Jet;
+    border: 1px solid $DarkYellow;
+    background-color: $Yellow; //GetColor(8);
+    border-radius: 3px;
+    box-shadow: 4px 4px 8px 4px rgba(100,50,00,0.3);
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 120%; 
+  }
+  &:hover > span.tooltipText { visibility: visible; }
+}

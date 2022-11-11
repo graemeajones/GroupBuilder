@@ -1,0 +1,57 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+
+main.mylinks {
+  // Styling
+  padding: 0.5rem;
+  background: $MainBackground;
+  // Layout
+  display: flex;
+  flex-direction: column;
+  // Children
+  div.paneFavourites {
+    color: $Jet;
+    margin-bottom: 0.5rem;
+  }
+  div.paneProposals {
+    // Children
+    div.droppableRegion {
+      margin: 0 0 1rem 0;
+      padding: 1rem;
+      border: 2px dashed GetColor(8);
+      border-radius: 7px;
+      min-height: 100px;
+    }
+  }
+  div.paneSearch {
+    div.formEntry { margin-bottom: 0.5rem;}
+  }
+  div.draggableItems {
+    // Styling
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+div.name {
+  display: inline-block;
+  font-size: 90%;
+  margin: 2px;
+  padding: 2px 5px;
+  border: 1px solid DarkGrey;
+  border-radius: 2px;
+  background: White;
+}
+
+@media (min-width: 700px) {
+  main.mylinks { flex-direction: row; gap: 2rem; }
+  div.paneFavourites { flex: 2 }
+  div.paneProposals { flex: 3 }
+  div.paneSearch { flex: 3; }
+}

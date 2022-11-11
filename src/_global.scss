@@ -1,0 +1,64 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+// -----------------------------------------------
+// Colours ///////////////////////////////////////
+// -----------------------------------------------
+
+$Purple0: #230c33;
+
+$Jet: #161616; // #323232;
+$Charcoal: lighten($Jet, 15%);
+$Red: #edafb8; // Rose
+$Green: #29e7cd; // Cyan
+$Blue: #749EE3;  // Little Boy Blue // 7C8DEB Cornflower Blue
+$Yellow: #ffdb58; // Mustard // #ead2ac; Sand
+$Purple: #632290; // KSU Purple
+$DarkRed: darken($Red, 20%);
+$DarkYellow: darken($Yellow, 10%);
+$DarkGreen: darken($Green, 10%);
+$DarkBlue: darken($Blue, 10%);
+
+$MenuColor: $Red;
+$PrimaryColor: $Purple0;
+$PrimaryColors: (
+  0: $Jet,
+  1: $PrimaryColor,
+  2: lighten($PrimaryColor, 10%),
+  3: lighten($PrimaryColor, 20%),
+  4: lighten($PrimaryColor, 30%),
+  5: lighten($PrimaryColor, 40%),
+  6: lighten($PrimaryColor, 50%),
+  7: lighten($PrimaryColor, 57%),
+  8: lighten($PrimaryColor, 64%),
+  9: lighten($PrimaryColor, 71%),
+  10: lighten($PrimaryColor, 78%),
+  11: lighten($PrimaryColor, 84%),
+  12: White,
+);
+
+$RootBackground: Red;
+$UnderlayColor: White;
+$MainBackground: WhiteSmoke;
+$CardBackground: White; // #f2e6ff;
+
+@function GetColor($level) {
+  @return map-get($PrimaryColors, $level);
+}
+
+// -----------------------------------------------
+// Default Styling ///////////////////////////////
+// -----------------------------------------------
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.Negative { color: $DarkRed; }
+.Positive { color: $DarkGreen; }
+.Neutral { color: $DarkBlue; }
+.Muted { color: GetColor(7); }

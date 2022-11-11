@@ -1,0 +1,22 @@
+// -----------------------------------------------
+// Imports ///////////////////////////////////////
+// -----------------------------------------------
+@import '../../../global';
+
+// -----------------------------------------------
+// Styling ///////////////////////////////////////
+// -----------------------------------------------
+
+.favourite {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  font-size: 80%;
+  color: white;
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 500;
+  background: GetColor(6);
+  vertical-align: text-top;
+}
