@@ -30,9 +30,7 @@ export function Droppable(props) {
     event.target.appendChild(id);
   };
 
-  const allowDrop = (event) => {
-    event.preventDefault();
-  };
+  const allowDrop = (event) => event.preventDefault();
   
   // View ----------------------------------------
   return (
