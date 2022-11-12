@@ -23,19 +23,22 @@ function MyProjectsCard({selectedGroupID,onSelect}) {
   }
 
   const buildProjectStatusSpan = (status) =>
-    status === 1 ? <span className="Negative">Completed</span>
-      : status === 2 ? <span className="Neutral">Running</span>
-          : status === 3 ? <span className="Positive">Soliciting</span>
-              : "Undefined";
+    status === 1 ? <span className="Negative">Pending</span>
+      : status === 2 ? <span className="Neutral">Soliciting</span>
+        : status === 3 ? <span className="Positive">Running</span>
+          : status === 4 ? <span className="Positive">Paused</span>
+            : status === 5 ? <span className="Negative">Completed</span>
+              : status === 6 ? <span className="Negative">Terminated</span>
+                : "Undefined";
 
   const buildTableContent = (projects, selectedID) => 
     projects.map((project) => {
       // Create project information
       const projName = (<span>{project['ProjectName']}<br /><span className="Muted">{project['ProjectModule']}</span></span>);
       // Modify ProjectStart field
-      const projStart = new Date(project['ProjectStart']);
+      const projStart = new Date(project['ProjectStartdate']);
       // Build a ProjectStatus field
-      const projStatus = buildProjectStatusSpan(parseInt(project['ProjectStatusID']));
+      const projStatus = buildProjectStatusSpan(parseInt(project['ProjectProjectstatusID']));
       // Create project's JSX button
       const projButton = (selectedID !== parseInt(project['ProjectID']))
         ? (
@@ -61,7 +64,7 @@ function MyProjectsCard({selectedGroupID,onSelect}) {
   const handleSelect = (event) => {
     const id = parseInt(event.target.id);
     const index = listOfProjects.findIndex( (project) => id===parseInt(project['ProjectID']) );
-    const status = parseInt(listOfProjects[index]['ProjectStatus']);
+    const status = parseInt(listOfProjects[index]['ProjectProjectstatusID']);
     onSelect( id, status );
   }
 

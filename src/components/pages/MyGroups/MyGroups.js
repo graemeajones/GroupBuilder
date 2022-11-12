@@ -16,8 +16,9 @@ function MyGroups() {
   const isSelectedProjectRecruiting = useRef(false);
 
   // Methods -------------------------------------
-  const handleProjectSelect = (id,projectStatus) => {
-    isSelectedProjectRecruiting.current = (projectStatus===1);
+  const SOLICITING = 2; // PK of "Soliciting" status in Unibase Projectstatus table
+  const handleProjectSelect = (id, projectStatus) => {
+    isSelectedProjectRecruiting.current = (projectStatus===SOLICITING);
     setSelectedGroupID(id);
   }
 
